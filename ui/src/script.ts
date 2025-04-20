@@ -2,7 +2,7 @@
 let currentPlayer = 'X';
 
 // Define the function to handle the click event
-function handleCellClick(event) {
+function handleCellClick(event: any) {
     const cell = event.target;
     if (cell.textContent === '') {
         cell.textContent = currentPlayer;
@@ -18,8 +18,8 @@ cells.forEach(cell => {
 
 // Add functionality to reset the game
 const resetButton = document.getElementById('reset-button');
-resetButton.addEventListener('click', () => {
-    cells.forEach(cell => {
+resetButton!.addEventListener('click', () => {
+    cells.forEach((cell:any) => {
         cell.textContent = ''; // Clear the content of each cell
         delete cell.dataset.currentPlayer; // Remove any stored data
     });
