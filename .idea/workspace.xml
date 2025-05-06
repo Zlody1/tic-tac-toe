@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27dbb27d-3463-4efb-bd45-ff18f1162392" name="Changes" comment="transferred to ts">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="27dbb27d-3463-4efb-bd45-ff18f1162392" name="Changes" comment="added vicory message, added check winner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/field.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/field.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/script.ts" afterDir="false" />
     </list>
@@ -67,13 +67,22 @@
       <option name="project" value="LOCAL" />
       <updated>1745168314838</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added vicory message, added check winner">
+      <option name="closed" value="true" />
+      <created>1745618872300</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745618872300</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="field and reset button" />
     <MESSAGE value="transferred to ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="transferred to ts" />
+    <MESSAGE value="added vicory message, added check winner" />
+    <option name="LAST_COMMIT_MESSAGE" value="added vicory message, added check winner" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

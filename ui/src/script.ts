@@ -1,9 +1,12 @@
 // Define the currentPlayer variable outside the function
 let currentPlayer: string = 'X';
+let scoreX = 0;
+let scoreO = 0;
 
 // Define the function to handle the click event
 function handleCellClick(event: MouseEvent): void {
     let winner = checkWinner();
+
     if (winner) {
 
         return; // If there's already a winner, do nothing
@@ -18,8 +21,16 @@ function handleCellClick(event: MouseEvent): void {
     }
     winner = checkWinner();
     if (winner) {
-    showWinner();
+        if (winner === 'X') {
+            scoreX++;
+        } else {
+            scoreO++;
+        }
+        console.log(`Winner: ${winner}`, scoreX, scoreO);
+        updateScoreboard(scoreX, scoreO);
+        showWinner();
     }
+
 }
 
 // Attach the event listener to all cells
@@ -74,4 +85,12 @@ function showWinner(): void {
 function hideWinner(): void {
     const message = document.getElementById('message') as HTMLDivElement;
     message.setAttribute('hidden', 'true');
+}
+
+function updateScoreboard(scoreX: number, scoreO: number): void {
+    const scoreXElement = document.getElementById('score-x') as HTMLTableCellElement;
+    const scoreOElement = document.getElementById('score-o') as HTMLTableCellElement;
+
+    scoreXElement.textContent = scoreX.toString();
+    scoreOElement.textContent = scoreO.toString();
 }
