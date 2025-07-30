@@ -8,3 +8,10 @@ npm run build
 
 - Make game log table, that shows 10 last results. Time and winner of the game.
 
+- logic for the game:
+  - Player 1 and Player 2 take turns.
+  - Player can choose to play with computer or with another player.
+  - Player can choose to play with different difficulty levels.
+  - Player can choose to play with different board sizes.
+  - Player can choose to play with different winning conditions.
+  - Player can choose to play with different symbols.
