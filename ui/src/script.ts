@@ -29,6 +29,8 @@ function handleCellClick(event: MouseEvent): void {
         console.log(`Winner: ${winner}`, scoreX, scoreO);
         updateScoreboard(scoreX, scoreO);
         showWinner();
+        // Add to game history after winner is determined
+        addGameHistoryRow(winner, new Date().toLocaleString());
     }
 
 }
@@ -93,4 +95,34 @@ function updateScoreboard(scoreX: number, scoreO: number): void {
 
     scoreXElement.textContent = scoreX.toString();
     scoreOElement.textContent = scoreO.toString();
+}
+
+/**
+ * Appends a new row with two fields to the Game History table.
+ * @param {string} field1 - The first field (e.g., player or description)
+ * @param {string} field2 - The second field (e.g., result or timestamp)
+ */
+function addGameHistoryRow(field1: string, field2: string): void {
+    const historyTable = document.querySelector('#game-history');
+    if (!historyTable) return;
+
+    // If this is the first entry, clear the placeholder text
+    if (historyTable.textContent === 'No games played yet.') {
+        historyTable.textContent = '';
+    }
+
+    // Create a new row with two columns
+    const tr = document.createElement('tr');
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+    td1.textContent = field1;
+    td2.textContent = field2;
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+
+    // If #game-history is a td, append the row to its parent table
+    const parentTable = historyTable.closest('table');
+    if (parentTable) {
+        parentTable.appendChild(tr);
+    }
 }
