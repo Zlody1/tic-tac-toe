@@ -98,16 +98,9 @@
                             <outputDirectory>${project.build.directory}/classes/static</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>ui</directory>
-                                    <includes>
-                                        <include>**/*.html</include>
-                                        <include>**/*.css</include>
-                                    </includes>
-                                </resource>
-                                <resource>
                                     <directory>dist</directory>
                                     <includes>
-                                        <include>**/*.js</include>
+                                        <include>**/*</include>
                                     </includes>
                                 </resource>
                             </resources>
