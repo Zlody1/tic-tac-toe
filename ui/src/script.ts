@@ -126,3 +126,12 @@ function addGameHistoryRow(field1: string, field2: string): void {
         parentTable.appendChild(tr);
     }
 }
+/**
+ * this function starts a local game by resetting the game state
+ */
+const startLocalGame: HTMLButtonElement = document.getElementById('start-game-button') as HTMLButtonElement;
+startLocalGame.addEventListener('click', () => {
+    // log something to the console
+    console.log('Starting a new local game...');
+
+});
