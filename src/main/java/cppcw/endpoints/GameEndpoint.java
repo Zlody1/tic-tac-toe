@@ -9,6 +9,6 @@ public class GameEndpoint {
 
     @GetMapping(path = "/")
     Greeting greeting() {
-        return new Greeting("");
+        return new Greeting("Hello");
     }
 }

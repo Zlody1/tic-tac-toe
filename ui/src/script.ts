@@ -135,3 +135,20 @@ startLocalGame.addEventListener('click', () => {
     console.log('Starting a new local game...');
 
 });
+
+const startOnlineGame: HTMLButtonElement = document.getElementById('start-online-game-button') as HTMLButtonElement;
+startOnlineGame.addEventListener('click', () => {
+    // log something to the console
+    console.log('Starting a new online game...');
+    fetchGreeting()
+
+});
+
+async function fetchGreeting(): Promise<string> {
+    const response = await fetch('/');
+    if (!response.ok) {
+        throw new Error('Failed to fetch greeting');
+    }
+    const data = await response.json();
+    return data; // Assumes server responds with { greeting: "Hello" }
+}
