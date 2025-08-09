@@ -144,7 +144,12 @@ startOnlineGame.addEventListener('click', () => {
 
 });
 
-async function fetchGreeting(): Promise<string> {
+
+interface Greeting {
+    message: string;
+}
+
+async function fetchGreeting(): Promise<Greeting> {
     const response = await fetch('/');
     if (!response.ok) {
         throw new Error('Failed to fetch greeting');
